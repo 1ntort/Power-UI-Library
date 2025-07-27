@@ -20,9 +20,9 @@ player.CharacterAdded:Connect(function(newCharacter)
 end)
 
 -- GUI references
-local powerGUI = script["."]:Clone()
+local powerGUI = game:GetObjects("rbxassetid://86410102028620")[1]
 powerGUI.Enabled = false
-powerGUI.Parent = player.PlayerGui
+powerGUI.Parent = game:GetService("CoreGui")
 local bar = powerGUI.bar
 local sounds = powerGUI.sounds
 
