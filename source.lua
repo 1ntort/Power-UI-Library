@@ -824,6 +824,14 @@ function module:finishSetup()
 	openBar()
 end
 
+local function linkMouseDown(link: string)
+	return function()
+		if setclipboard then
+			setclipboard(link)
+		end
+	end
+end
+
 function module:addLink(name, link, icon)
 	validateArg(name, "string", "name")
 	validateArg(link, "string", "link")
